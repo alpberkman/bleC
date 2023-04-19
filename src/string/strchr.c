@@ -1,10 +1,11 @@
 #include <string.h>
 
-char *strchr(const char *str, int c){
+char *strchr(const char *str, int chr){
+
+	const char c = chr;
 	
-	while(*str != '\0' && *str !=  (char) c){
+	while(*str != '\0' && *str !=  c)
 		++str;
-	}
 	
-	return (char *) (*str == (char) c ? str : NULL);
+	return (*str == c ? str : NULL);
 }

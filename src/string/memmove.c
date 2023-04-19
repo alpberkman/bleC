@@ -3,17 +3,15 @@
 void *memmove(void *dest, void const *src, size_t n) {
 
     char *d = (char *) dest;
-    char const *s = (char *) src;
+    const char *s = (const char *) src;
+    size_t i;
 
-    if(d < s) {
-        for(size_t i = 0; i < n; ++i) {
+    if(d < s)
+        for(i = 0; i < n; ++i)
             d[i] = s[i];
-        }
-    } else {
-        for(size_t i = n; 0 < i; --i) {
-            d[i-1] = s[i-1];
-        }
-    }
+    else
+        for(i = n-1; 0 <= i; --i)
+            d[i] = s[i];
 
     return dest;
 }
