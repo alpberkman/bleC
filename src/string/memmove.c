@@ -1,4 +1,4 @@
-#include "./string.h"
+#include <string.h>
 
 void *memmove(void *dest, void const *src, size_t n) {
 

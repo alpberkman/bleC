@@ -1,4 +1,4 @@
-#include "./string.h"
+#include <string.h>
 
 void *memchr(const void *str, int c, size_t n) {
 

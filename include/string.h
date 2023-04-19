@@ -2,12 +2,12 @@
 #define _STRING_H
 
 #ifndef NULL
-#define NULL	0
+#define NULL	(0)
 #endif
 
 #ifndef _SIZE_T
 #define _SIZE_T
-typedef long unsigned int size_t;
+typedef unsigned int size_t;
 #endif
 
 void *memchr(const void *str, int c, size_t n);

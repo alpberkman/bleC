@@ -1,4 +1,4 @@
-#include "./string.h"
+#include <string.h>
 
 char *strpbrk(const char *str1, const char *str2){
 	
